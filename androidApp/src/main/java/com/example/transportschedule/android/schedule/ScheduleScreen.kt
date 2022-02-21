@@ -74,6 +74,7 @@ fun scheduleView(route: Segment) {
                 .padding(10.dp),
         ) {
             Row(
+
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
