@@ -16,7 +16,7 @@ class NetworkService {
             acceptContentTypes = acceptContentTypes + ContentType.Any
         }
         install(HttpTimeout) {
-            requestTimeoutMillis = 100_000
+            requestTimeoutMillis = 200_000L
         }
         install(Logging) {
             logger = Logger.DEFAULT

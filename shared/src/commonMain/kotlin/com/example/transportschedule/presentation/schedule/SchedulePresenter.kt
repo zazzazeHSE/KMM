@@ -9,9 +9,9 @@ import kotlinx.coroutines.launch
 class SchedulePresenter: BasePresenter<IScheduleView>(ioDispatcher), ISchedulePresenter {
     private val service = RoutesService()
 
-    override fun loadRoutes(from: PlainStation, to: PlainStation) {
+    override fun loadRoutes(from: String, to: String) {
         scope.launch {
-            service.loadRoute(from.code, to.code) {
+            service.loadRoute(from, to) {
                 if (it == null) {
                     return@loadRoute
                 }

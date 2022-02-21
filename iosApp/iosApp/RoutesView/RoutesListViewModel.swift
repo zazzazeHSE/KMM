@@ -20,7 +20,7 @@ class RoutesListViewModel: ObservableObject, IScheduleView {
             return
         }
         presenter.attachView(view: self)
-        presenter.loadRoutes(from: from, to: to)
+        presenter.loadRoutes(from: from.code, to: to.code)
     }
 
     func onViewDidDisappear() {

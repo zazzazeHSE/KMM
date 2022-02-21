@@ -17,7 +17,6 @@ class StationsService {
             val requestsBuilder = AllStationsRequestBuilder()
             try {
                 val result = networkService.loadData<AllStations>(requestsBuilder.prepareURL())
-                print(result)
                 withContext(uiDispatcher) {
                     callback(result)
                 }
